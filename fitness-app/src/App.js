@@ -4,17 +4,19 @@ import Navbar from './components/Navbar';
 import SignUpForm from './components/SignUpForm';
 import SignInForm from './components/SignInForm';
 import DietTracker from './components/DietTracker';
+import WorkoutPlanner from './components/WorkoutPlanner';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div className="App">        
+      <div className="App">   
         <Routes>
           <Route path="/diet-tracker" element={<DietTracker />} />
           <Route path="/sign-up" element={<SignUpForm />} />
           <Route path="/sign-in" element={<SignInForm />} />
+          <Route path="/workout-planner" element={<WorkoutPlanner />} />
         </Routes>
       </div>
     </Router>
