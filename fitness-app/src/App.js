@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './Navbar';
-import SignUpForm from './SignUpForm';
-import SignInForm from './SignInForm';
-import DietTracker from './DietTracker';
+import Navbar from './components/Navbar';
+import SignUpForm from './components/SignUpForm';
+import SignInForm from './components/SignInForm';
+import DietTracker from './components/DietTracker';
 import './App.css';
 
 function App() {
