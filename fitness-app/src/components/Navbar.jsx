@@ -11,6 +11,9 @@ const Navbar = () => {
         <div className="navbar-links">
         <ul className="nav-menu">
         <li className="nav-item">
+            <div className="nav-link" onClick={() => navigate('/chatbot')}>Chatbot</div>
+          </li>
+          <li className="nav-item">
             <div className="nav-link" onClick={() => navigate('/workout-planner')}>Planner</div>
           </li>
           <li className="nav-item">

@@ -7,6 +7,7 @@ import SignInForm from './components/SignInForm';
 import DietTracker from './components/DietTracker';
 import WorkoutPlanner from './components/WorkoutPlanner';
 import UserProfile from './components/UserProfile';
+import Chatbot from './components/Chatbot';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Navbar />
       <div className="App">      
         <Routes>
+          <Route path="/chatbot" element={<Chatbot />} />
           <Route path="/home-page" element={<Home />} />
           <Route path="/diet-tracker" element={<DietTracker />} />
           <Route path="/sign-up" element={<SignUpForm />} />

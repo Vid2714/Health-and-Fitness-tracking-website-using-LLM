@@ -1,0 +1,15 @@
+.App {
+    text-align: left;
+    place-items: center;
+  }
+  
+  .messageInput {
+    text-align: right;
+  }
+  
+  .chatContainer {
+    margin: 5% 25%;
+    justify-content: center;
+  }
+
+  
