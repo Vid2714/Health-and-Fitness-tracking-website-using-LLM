@@ -17,7 +17,9 @@ h1, h2 {
   color: #333;
   text-align: center;
 }
-
+p{
+  font-size: 1.2rem;
+}
 .section {
   margin-bottom: 40px;
 }
@@ -150,6 +152,7 @@ button:hover ,.submit:hover{
   gap: 20px;
   overflow: hidden;
   scroll-behavior: smooth;
+  padding: 0 10px;
 }
 
 .exercise-item {
