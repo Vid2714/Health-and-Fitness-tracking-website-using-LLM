@@ -22,6 +22,7 @@ function SignInForm() {
   };
 
   return (
+    <div className="signForm">
     <div className="sign-in-form">
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
@@ -49,6 +50,7 @@ function SignInForm() {
         </div>
         <button type="submit">Sign In</button>
       </form>
+    </div>
     </div>
   );
 }

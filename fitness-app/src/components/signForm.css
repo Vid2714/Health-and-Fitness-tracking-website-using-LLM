@@ -1,9 +1,10 @@
 
-.Form-container{
-    display: flex;
-    
+.signForm{
+    margin: 20px;
+    text-align: center;
   }
   .sign-up-form, .sign-in-form {
+    margin: auto;
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -14,7 +15,7 @@
   
   .sign-up-form h2, .sign-in-form h2 {
     text-align: center;
-    color: #333;
+    color: #171717;
     margin-bottom: 20px;
   }
   
@@ -36,7 +37,7 @@
   .sign-up-form input, .sign-in-form input,
   .sign-up-form select {
     width: 100%;
-    padding: 8px;
+    padding: 4px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
