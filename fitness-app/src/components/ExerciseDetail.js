@@ -5,7 +5,7 @@ function ExerciseDetail({ exercise, onClose }) {
     <div className="exercise-detail">
       <button className="close-button" onClick={onClose}>X</button>
       <h3>{exercise.name}</h3>
-      <img src={exercise.gif} alt={exercise.name} className="exercise-gif" />
+      <img src={exercise.gif} height={300} alt={exercise.name} className="exercise-gif" />
       <div className="instructions">
         <h4>Instructions:</h4>
         <ul>

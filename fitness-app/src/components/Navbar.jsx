@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">  
-        <div className="navbar-logo" onClick={() => navigate('/')}>Fitness and Health</div>
+        <div className="navbar-logo" onClick={() => navigate('/home-page')}>FitTrack</div>
         <div className="navbar-links">
         <ul className="nav-menu">
         <li className="nav-item">
@@ -17,10 +17,10 @@ const Navbar = () => {
             <div className="nav-link" onClick={() => navigate('/diet-tracker')}>Diet</div>
           </li>
           <li className="nav-item">
-            <div className="nav-link" onClick={() => navigate('/sign-up')}>Sign Up</div>
+            <div className="nav-link" onClick={() => navigate('/sign-up')}>Login</div>
           </li>
           <li className="nav-item">
-            <div className="nav-link" onClick={() => navigate('/sign-in')}>Sign In</div>
+            <div className="nav-link" onClick={() => navigate('/user-profile')}>Profile</div>
           </li>
         </ul>   
         </div>   

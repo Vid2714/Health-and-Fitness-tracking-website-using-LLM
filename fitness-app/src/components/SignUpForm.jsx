@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signForm.css'
 
 function SignUpForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,6 +13,7 @@ function SignUpForm() {
     weight: '',
     height: '',
   });
+  const [message, setMessage] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,21 +23,49 @@ function SignUpForm() {
     }));
   };
 
+  const validateForm = () => {
+    if (!formData.name || !formData.email || !formData.password) {
+      setMessage({ text: 'Please fill out all required fields.', type: 'error' });
+      return false;
+    }
+    if (formData.password.length < 6) {
+      setMessage({ text: 'Password must be at least 6 characters long.', type: 'error' });
+      return false;
+    }
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      setMessage({ text: 'Please enter a valid email address.', type: 'error' });
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate form data before submission
-    if (!formData.name || !formData.email || !formData.password) {
-        alert('Please fill out all required fields.');
-        return;
+    if (validateForm()) {
+      console.log('Form submitted:', formData);
+      // Here you would typically send the data to your backend
+      alert('Profile created!');
+      setMessage({ text: 'Profile created!', type: 'success' });
+      // Clear form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        password: '',
+        age: '',
+        sex: '',
+        weight: '',
+        height: '',
+      });
+      // Optionally, navigate to another page after a short delay
+      setTimeout(() => navigate('/user-profile'), 2000);
     }
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to your backend
   };
 
   return (
     <div className="signForm">
     <div className="sign-up-form">
       <h2>Sign Up for FitTrack</h2>
+      <p>Existing User? <span className="hyperlink" onClick={() => navigate('/sign-in')}>Sign in here</span></p>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Full Name:</label>

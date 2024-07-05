@@ -57,3 +57,16 @@
   .sign-up-form button:hover, .sign-in-form button:hover {
     background-color: #E74504;
   }
+
+  .hyperlink {
+    color: #0000EE; /* This is the default hyperlink color for most browsers */
+    text-decoration: underline;
+  }
+  
+  .hyperlink:hover {
+    color: #551A8B; /* This changes the color when hovering over the link */
+  }
+  
+  .hyperlink:visited {
+    color: #551A8B; /* This changes the color for visited links */
+  }

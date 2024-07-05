@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './signForm.css'
 
 function SignInForm() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -25,7 +27,7 @@ function SignInForm() {
     <div className="signForm">
     <div className="sign-in-form">
       <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
+      <p>New User? <span className="hyperlink" onClick={() => navigate('/sign-up')}>Sign up here</span></p>      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input
