@@ -27,7 +27,8 @@ function SignInForm() {
     <div className="signForm">
     <div className="sign-in-form">
       <h2>Sign In</h2>
-      <p>New User? <span className="hyperlink" onClick={() => navigate('/sign-up')}>Sign up here</span></p>      <form onSubmit={handleSubmit}>
+      <p>New User? <span className="hyperlink" onClick={() => navigate('/sign-up')}>Sign up here</span></p>      
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="email">Email:</label>
           <input
